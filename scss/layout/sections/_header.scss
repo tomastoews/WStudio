@@ -1,0 +1,48 @@
+
+#header {
+    height: $height_header;
+    background: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: 70%;
+    margin-top: -100px;
+    padding-top: 100px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        font-family: 'lato_bold';
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+    p {
+        color: #fff;
+        font-size: 30px;
+        margin: 20px 0 40px 0;
+    }
+}
+
+#header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: ($height_header + 100px);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $color_header_background;
+    z-index: -1;
+}
+
+@include responsive_mobile {
+    #header {
+        h1 { word-break: break-all; }
+    }
+}

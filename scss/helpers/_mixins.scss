@@ -1,0 +1,44 @@
+
+@mixin easeOut {
+    transition: all 0.1s ease-in-out;
+}
+
+@mixin menuEaseOut {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin responsive_large {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin responsive_tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin responsive_tablet_small {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin responsive_mobile_large {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin responsive_mobile {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin responsive_mobile_small {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
