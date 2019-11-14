@@ -1,14 +1,16 @@
 {
   "name": "wstudio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
-  },
   "author": "Tomas Töws",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "build": "parcel build src/index.html",
+    "build-and-deploy": "rm -r -f -v dist/ && parcel build src/index.html && node rewriteURLs.js && ./deploy.sh"
+  },
   "devDependencies": {
-    "node-sass": "^4.9.3"
+    "parcel-bundler": "^1.12.4",
+    "replace-in-file": "^4.2.0",
+    "sass": "^1.23.3"
   }
 }
